@@ -1,0 +1,80 @@
+{
+  "extends": ["react-app", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "plugins": [
+    "prettier", "unused-imports"
+  ],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "ignorePatterns": ["**/*.config.js"],
+  "rules": {
+    "no-control-regex": 0,
+    "indent": "off",
+    "global-require": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": ["multiline-const", "class", "return"], "next": "*" }
+    ],
+    "jsx-a11y/no-autofocus": "off",
+    "lodash/import-scope": "off",
+    "max-len": [2, { "code": 300, "ignoreTemplateLiterals": true, "ignoreStrings": true, "ignorePattern": "^import .*" }],
+    "camelcase": "off",
+    "linebreak-style": "off",
+    "prefer-arrow-callback": "off",
+    "no-useless-escape": "off",
+    "prettier/prettier": ["warn", {
+      "semi": true, // точка с запятой - нет
+      "trailingComma": "all", // запятая в последней строке - да
+      "singleQuote": true, // использовать одинарные кавычки - да!
+      "printWidth": 120, // длина строки - 80
+      "tabWidth": 3, // длина "таба" - 2 пробела
+      "arrowParens": "avoid",
+      "jsxSingleQuote": true,
+      "useTabs": false, // длина строки - 80
+      "endOfLine": "auto",
+      "proseWrap": "always"
+      //      "quoteProps": "as-needed",
+      //      "bracketSpacing": true,
+      //      "bracketSameLine": false,
+      //      "jsxBracketSameLine": false, // закрывающийся jsx в этой же строке
+      //      "parser": "typescript" // парсер - flow (пока не важно)
+    }],
+    "import/namespace": [2, { "allowComputed": true }],
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/prefer-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-constant-condition": "off",
+    "no-console": "off",
+    "no-unused-vars": "warn",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
+    "no-underscore-dangle": "off",
+    "no-plusplus": "off",
+    "no-nested-ternary": "off",
+    "no-debugger": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off", // 0
+    "react/destructuring-assignment": "off",
+    "react/no-unescaped-entities": "off",
+    "react/state-in-constructor": "off",
+    "react/no-danger": "off",
+    "react/display-name": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/default-props-match-prop-types": "off",
+    "react/no-unused-prop-types": "off",
+    "spaced-comment": ["error", "always", { "markers": ["/"] }]
+  }
+}
