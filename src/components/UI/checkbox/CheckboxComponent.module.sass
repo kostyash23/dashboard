@@ -1,0 +1,83 @@
+// CheckboxComponent.module.scss
+.checkboxWrapper19 
+  box-sizing: border-box
+  --background-color: #fff
+  --checkbox-height: 25px
+
+  @keyframes dothabottomcheck19 
+    0% 
+      height: 0
+    
+    100% 
+      height: calc(var(--checkbox-height) / 2)
+    
+  
+
+  @keyframes dothatopcheck19 
+    0% 
+      height: 0
+    
+    50% 
+      height: 0
+    
+    100% 
+      height: calc(var(--checkbox-height) * 1.2)
+    
+  
+
+  input[type='checkbox'] 
+    display: none
+  
+
+  .checkBox 
+    height: var(--checkbox-height)
+    width: var(--checkbox-height)
+    background-color: transparent
+    border: calc(var(--checkbox-height) * 0.1) solid #000
+    border-radius: 5px
+    position: relative
+    display: inline-block
+    box-sizing: border-box
+    transition: border-color ease 0.2s
+    cursor: pointer
+
+    &::before,
+    &::after 
+      box-sizing: border-box
+      position: absolute
+      height: 0
+      width: calc(var(--checkbox-height) * 0.2)
+      background-color: #34b93d
+      display: inline-block
+      transform-origin: left top
+      border-radius: 5px
+      content: ' '
+      transition: opacity ease 0.5s
+    
+
+    &::before 
+      top: calc(var(--checkbox-height) * 0.72)
+      left: calc(var(--checkbox-height) * 0.41)
+      box-shadow: 0 0 0 calc(var(--checkbox-height) * 0.05) var(--background-color)
+      transform: rotate(-135deg)
+    
+
+    &::after 
+      top: calc(var(--checkbox-height) * 0.37)
+      left: calc(var(--checkbox-height) * 0.05)
+      transform: rotate(-45deg)
+    
+  
+
+  input[type='checkbox']:checked + .checkBox 
+    border-color: #34b93d
+
+    &::after 
+      height: calc(var(--checkbox-height) / 2)
+      animation: dothabottomcheck19 0.2s ease 0s forwards
+    
+
+    &::before 
+      height: calc(var(--checkbox-height) * 1.2)
+      animation: dothatopcheck19 0.4s ease 0s forwards
+    

@@ -8,9 +8,7 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
-  "plugins": [
-    "prettier", "unused-imports"
-  ],
+  "plugins": ["prettier", "unused-imports"],
   "env": {
     "node": true,
     "browser": true,
@@ -32,23 +30,17 @@
     "linebreak-style": "off",
     "prefer-arrow-callback": "off",
     "no-useless-escape": "off",
-    "prettier/prettier": ["warn", {
-      "semi": true, // точка с запятой - нет
-      "trailingComma": "all", // запятая в последней строке - да
-      "singleQuote": true, // использовать одинарные кавычки - да!
-      "printWidth": 120, // длина строки - 80
-      "tabWidth": 3, // длина "таба" - 2 пробела
-      "arrowParens": "avoid",
-      "jsxSingleQuote": true,
-      "useTabs": false, // длина строки - 80
-      "endOfLine": "auto",
-      "proseWrap": "always"
-      //      "quoteProps": "as-needed",
-      //      "bracketSpacing": true,
-      //      "bracketSameLine": false,
-      //      "jsxBracketSameLine": false, // закрывающийся jsx в этой же строке
-      //      "parser": "typescript" // парсер - flow (пока не важно)
-    }],
+    "prettier/prettier": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "import/namespace": [2, { "allowComputed": true }],
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
@@ -66,10 +58,10 @@
     "no-nested-ternary": "off",
     "no-debugger": "off",
     "react-hooks/exhaustive-deps": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js",".jsx", ".tsx"] }],
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/prop-types": "off", // 0
+    "react/prop-types": "off",
     "react/destructuring-assignment": "off",
     "react/no-unescaped-entities": "off",
     "react/state-in-constructor": "off",
