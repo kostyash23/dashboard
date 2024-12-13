@@ -1,0 +1,15 @@
+{
+   "extends": "stylelint-config-sass-guidelines",
+   "rules": {
+      "max-nesting-depth": 5,
+      "order/properties-alphabetical-order": null,
+      "selector-max-compound-selectors": 5,
+      "selector-class-pattern": null,
+      "selector-max-id": 2,
+      "scss/at-import-partial-extension-blacklist": null,
+      "scss/at-rule-no-unknown": {
+         "ignoreAtRules": ["@tailwind"]
+      },
+      "selector-no-qualifying-type": [true, { "ignore": ["attribute", "class", "id"] }]
+   }
+}
